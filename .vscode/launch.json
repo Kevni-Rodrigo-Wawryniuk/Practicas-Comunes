@@ -1,8 +1,6 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
-
     {
       "type": "java",
       "name": "Launch Java Program",
@@ -23,8 +21,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Usuario/Documents/GitHub/Practicas/Practicas-Comunes/javaScript",
-      "program": "c:/Users/Usuario/Documents/GitHub/Practicas/Practicas-Comunes/javaScript/build/Debug/outDebug",
+      "cwd": "c:/Users/Usuario/Documents/GitHub/Practicas/Practicas-Comunes/Cobol/bin",
+      "program": "c:/Users/Usuario/Documents/GitHub/Practicas/Practicas-Comunes/Cobol/bin/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
@@ -34,6 +32,6 @@
           "ignoreFailures": true
         }
       ]
-    },
+    }
   ]
 }
