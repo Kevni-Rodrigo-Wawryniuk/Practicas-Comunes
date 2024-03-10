@@ -3,18 +3,26 @@
 #include <stdio.h>
 
 int valorFibonacci0, valorFibonacci1, valorFibonacci2;
+float p;
+char a;
 
 int main()
 {
-    NumberFibonaccis();
-    /*
+    // NumberFibonaccis();
+    
     int i;
-    for (i = 0; i < 100; i++)
+    for (i = 0; i < 20; i++)
     {
         MultiplosDeTres(i);
-        MultiplosDeCinco(i);
     }
-    */
+    
+    printf("  Multiplos de Cinco ");
+
+    for (i = 0; i < 20; i++)
+    {
+         MultiplosDeCinco(i);
+    }
+    
     return (0);
 }
 
