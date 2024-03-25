@@ -1,6 +1,7 @@
 
 // para este se necesita el debug de -> C/C++ Runnet:Debug Session
 #include <stdio.h>
+#include <string.h>
 
 int valorFibonacci0, valorFibonacci1, valorFibonacci2;
 float p;
@@ -8,22 +9,35 @@ char a;
 
 int main()
 {
-    // NumberFibonaccis();
-    
-    int i;
-    for (i = 0; i < 20; i++)
-    {
-        MultiplosDeTres(i);
-    }
-    
-    printf("  Multiplos de Cinco ");
+    // pasar frase a binario
+    char frase[100];
 
-    for (i = 0; i < 20; i++)
-    {
-         MultiplosDeCinco(i);
-    }
-    
+    printf("Ingrese una frase: ");
+    fgets(frase, sizeof(frase), stdin);
+    frase[strcspn(frase, "\n")] = 0;
+
+    printf("La frase en bunario es: \n");
+    ConvertirABinario(frase);
+
     return (0);
+}
+// convertir a binario
+void ConvertirABinario(char c){
+    for(int i = 10000; i >= 0; --i){
+        putchar((c &(1 << i)) ? '1' : ' 0');
+        
+    };
+}
+// Pase de frase a binario
+void FrasesEnBinario(const char* str)
+{
+    size_t len = strlen(str);
+
+    for(size_t i = 0; i < len; i++){
+        ConvertirABinario(str[i]);
+        putchar(' ');
+    }
+    putchar('\n');
 }
 
 // numero de fibonacci
