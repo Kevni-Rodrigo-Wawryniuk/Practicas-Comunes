@@ -34,6 +34,8 @@ variable de referencia:
 // para utilizar el debug es -> Launch Java Program
 package Java;
 
+import java.util.Scanner;
+
 /**
  * Multiple_of_3_or_5
  */
@@ -41,17 +43,46 @@ class Program {
 
     // funcion principal
     public static void main(String[] args) {
-        
-        // NumbreFibonacci();
 
-        //Multiple_of_3();
-       /*  for (int i = 0; i < 20; i++) {
-            Multiple_of_5(i);
-        }
-        */
+        NumerosPrimos();
     }
 
     // funcion a llamar
+
+    public static void NumerosPrimos() {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingresa un valor: ");
+
+        int dvdin = scanner.nextInt();
+
+        ObtenerFactoresPrimos(dvdin);
+    }
+
+    public static void ObtenerFactoresPrimos(int numero) {
+        for (int i = 2; i <= numero; i++) {
+            while (numero % i == 0) {
+                System.out.println(i);
+                numero /= i;
+            }
+        }
+    }
+
+    // Sacar el resultado y resto de una division
+    public static void RestoYResultadoDeDivicion(int dividendo) {
+        int resto = 0, resultadoEntero = 0, divisor = 2;
+
+        // Sacar el resto
+        resto = dividendo % divisor;
+        // Sacar el resultado
+        resultadoEntero = dividendo / divisor;
+
+        System.err.println("Resto de la divicion es -> " + resto);
+
+        System.err.println("El resultado entero es -> " + resultadoEntero);
+    }
+
     // numeros de fibonacci
     public static void NumbreFibonacci() {
 

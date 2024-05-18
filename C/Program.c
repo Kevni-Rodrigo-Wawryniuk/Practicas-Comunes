@@ -23,7 +23,7 @@ int main()
 }
 // convertir a binario
 void ConvertirABinario(char c){
-    for(int i = 10000; i >= 0; --i){
+    for(int i = 100; i >= 0; --i){
         putchar((c &(1 << i)) ? '1' : ' 0');
         
     };

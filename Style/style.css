@@ -1,0 +1,160 @@
+/*  TIPOS DE SELECTORES  */
+/* SELECTOR UNIVERSAL*/
+/* SELECCIONA TODOS LOS ELEMENTOS */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* SELECCIONA TODOS LOS ELEMENTOS CON UN EL NOMBRE */
+nombre* {
+    width: 10%;
+}
+
+/* SELECCIONA LOS ELEMENTOS SIN ALGUN ESPACIO DE NOMBRE DEFINIDO */
+|* {
+    height: 50px;
+}
+
+/* 2 SELECTOR DE TIPO  */
+/* SELECCIONA LAS ETIQUETAS CORRESPONDIENTES DE HTML */
+P {
+    color: blueviolet;
+}
+
+h1 {
+    color: yellow;
+}
+
+/* 3 SELECTOR DE CLASES  */
+/* ESTOS SON LOS SELECTORES QUE PERMITEN INDICA POR MEDIO DE UN NOMBRE O CLASE QUE SE QUIERE MODIFICAR */
+.clase1 {
+    margin: 0;
+    color: magenta;
+}
+
+.clase1:hover {
+    margin: 2rem;
+}
+
+/* 4 SELECTOR DE ID */
+/* ES LO MISMO QUE EL SELECTOR POR CLASES SOLO QUE ESTE SE SELECIONA POR EL ATRIBUTO ID */
+#id2 {
+    color: brown;
+}
+
+/* 5 SELECTOR DE ATRIBUTOS */
+/* ESTOS SON SELECTORES QUE ESTAN HECHOS PARA LOS ELEMENTOS CON UN ATRIBUTO EN ESPECIFICO */
+li[src] {
+    width: 20%;
+}
+
+/* 6 SELECTOR DE PSEUDO-CLASE */
+/*  PERMITE APLICAR CAMBIOS A LAS CLASES QUE SE ENCUENTAN EN UN ESTADO ESPECIFICO */
+selector,
+.clase1 {
+    margin: 10rem;
+}
+
+/* MEDIA QUERIS DE MAX WIDTH */
+/* DEBEN IR EN CASCADA EN DIRECCION HACEA ABAJO PARA QUE LO LEA DE MANERA CORRECTA */
+
+/* 
+@media (max-width: 800px) {
+    body{
+        background-color: blue;
+    }
+}
+@media (max-width: 600px) {
+    body{
+        background-color:red;
+    }    
+} */
+
+
+/* CON EL MIN WIDTH */
+/* DEBEN IR EN CASCADA EN DIECCION HACIA ARRIBA */
+
+/* 
+@media (max-height: 500px) {
+    body{
+        background-color:red;
+    }    
+}
+@media (max-height: 300px) {
+    body{
+        background-color:blue;
+    }    
+}
+*/
+
+
+/* USAR EL AFTER Y BEFORE */
+/* AMBAS PROPIEDADES DEBEN CONTENER UN CONTEN PARA QUE SE PUEDA VISUALIZAR ALGO EN LA PAGINA  */
+.clase2 {
+    margin: 0;
+}
+
+.clase2 a::after {
+    content: "contenido after";
+    color: maroon;
+    font-size: var(--texto-titulo);
+    transition: opacity .5s;
+    opacity: 0;
+}
+
+.clase2 a.selected::after,
+.clase2 a:hover::after {
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.clase2 a::before {
+    content: "contenido before";
+    color: lightslategray;
+    opacity: 1;
+
+    transition: opacity .5s;
+}
+
+.clase2 a.selected::before,
+.clase2 a:hover::before {
+    opacity: 0;
+
+    transition: opacity .5s;
+}
+
+/* COMO USAR VARIABLES */
+/* PARA ESTO DEBEMOS USAR LA RAIZ DEL ARCHIVO PARA TENER VALORES PREDETERMINADOS QUE PODREMOS USAR EN CUALQUIER OTRO ARCHIVO */
+/*  ESTO PERMITE AGILIZAR EL CODIGO Y MODIFICAR LOS VALORES DE MANERA MAS RAPIDA */
+:root {
+    --color_rojo: red;
+    --texto-titulo: 16px;
+}
+
+/* MOSTRAR LISTAR AL CLICKEAR EL BOTON */
+
+.lista {
+    width: 30%;
+    height: 30%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 1;
+
+    transition: opacity 5s;
+}
+.lista::after{
+    opacity: 0;
+    
+    transition: opacity .3s linear;
+}
+.lista ul.selected::after,
+.lista ul:hover{
+    opacity: 0;
+    
+    transition: opacity .3s;
+}

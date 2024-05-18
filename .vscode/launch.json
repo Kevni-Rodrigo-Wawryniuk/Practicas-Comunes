@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Program",
+      "request": "launch",
+      "mainClass": "Java.Program",
+      "projectName": "Practicas-Comunes_1dcccc4f"
+    },
+    {
       "name": "(Windows) Launch",
       "type": "cppvsdbg",
       "request": "launch",

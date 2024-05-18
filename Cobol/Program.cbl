@@ -5,7 +5,7 @@
       * Tectonics: cobc
       ******************************************************************
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. YOUR-PROGRAM-NAME.
+       PROGRAM-ID. Programs.
        DATA DIVISION.
        FILE SECTION.
        WORKING-STORAGE SECTION.
@@ -61,4 +61,4 @@
 
             STOP RUN.
 
-       END PROGRAM YOUR-PROGRAM-NAME.
+       END PROGRAM Programs.
