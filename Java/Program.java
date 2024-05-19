@@ -43,12 +43,39 @@ class Program {
 
     // funcion principal
     public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese una palabra");
+        
+        String palabraAIngresar = scanner.nextLine();
 
-        NumerosPrimos();
+        if(EsPalindromo(palabraAIngresar)){
+            System.out.println("La palabra " + palabraAIngresar + " es palindroma");
+        }else{
+            System.out.println("La palabra " + palabraAIngresar + " no es palindroma");
+        }
+
+        scanner.close();
     }
 
-    // funcion a llamar
+    // buscar el palindromo mas grande
+    public static boolean EsPalindromo(String palabra) {
+        int left = 0;
+        int right = palabra.length() - 1;
 
+        while (left < right) {
+            if (palabra.charAt(left) != palabra.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+
+    // funcion a llamar
     public static void NumerosPrimos() {
 
         Scanner scanner = new Scanner(System.in);
