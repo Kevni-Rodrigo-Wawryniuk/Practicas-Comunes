@@ -43,16 +43,16 @@ class Program {
 
     // funcion principal
     public static void main(String[] args) {
-        
+
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.println("Ingrese una palabra");
-        
+
         String palabraAIngresar = scanner.nextLine();
 
-        if(EsPalindromo(palabraAIngresar)){
+        if (EsPalindromo(palabraAIngresar)) {
             System.out.println("La palabra " + palabraAIngresar + " es palindroma");
-        }else{
+        } else {
             System.out.println("La palabra " + palabraAIngresar + " no es palindroma");
         }
 
@@ -73,7 +73,6 @@ class Program {
         }
         return true;
     }
-
 
     // funcion a llamar
     public static void NumerosPrimos() {

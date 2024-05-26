@@ -38,7 +38,6 @@ function NumberFibonacci() {
         valorFibonacci2 = valorFibonacci0;
 
         console.log("Numero de fibonacci --> ", valorFibonacci0);
-
     }
 }
 
