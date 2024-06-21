@@ -1,0 +1,29 @@
+/* Lable */
+#form1 {
+    background-color: aqua;
+}
+
+#inputRadio:checked ~ #formularioAMostrar{
+    display: block;
+}
+#inputCheckbox:checked ~ #formularioAMostrar2{
+    display: block;
+}
+
+/* input */
+#inputRadio {
+    display: block;
+}
+#inputCheckbox{
+    display: block;
+}
+
+/* Formulario A Mostrar */
+#formularioAMostrar {
+    display: none;
+}
+
+/* Formulario A Mostrar 2*/
+#formularioAMostrar2 {
+    display: none;
+}
